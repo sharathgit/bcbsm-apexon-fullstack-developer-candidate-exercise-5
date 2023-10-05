@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+<div class="container col-lg-6">
+  <h1 class="text-center">Login</h1>
+  <div class="card">
+    <div class="card-body">
+      <form class="form-group">
+        <div class="form-group">
+          <label for="fromEmail">From Email :</label>
+          <input type="text" class="form-control" id="fromEmail" [(ngModel)]="fromEmail" placeholder="Enter From Email"
+                 name="fromEmail">
+        </div>
+        <div class="form-group">
+          <label for="toEmail">ToEmail:</label>
+          <input type="password" class="form-control" [(ngModel)]="toEmail" id="toEmail" placeholder="Enter To Email"
+                 name="toEmail">
+        </div>
+
+        <div class="form-group">
+          <label for="attachment">Attachment:</label>
+          <input type="attachment" class="form-control" [(ngModel)]="attachment" id="attachment" placeholder="Attachment"
+                 name="attachment">
+        </div>
+
+
+
+        <button (click)=sendEmailWithAttachment() class="btn btn-success">SendEmail</button>
+      </form>
+    </div>
+  </div>
+</div>
